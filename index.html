@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 02 - Tailwind CSS</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    @import "tailwindcss";
+  </style>
+</head>
+<body class="bg-gray-50 min-h-screen font-sans text-gray-900">
+
+  <!-- Navbar: posicionamento fixed + flexbox + cores + tipografia + bordas -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-blue-600 text-white shadow-lg border-b-2 border-blue-800">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center font-bold text-blue-600">DT</div>
+        <span class="font-semibold text-lg uppercase tracking-tight">Frameworks CSS</span>
+      </div>
+      <div class="hidden md:flex gap-6 text-sm font-medium">
+        <a href="#inicio" class="hover:text-blue-200 transition-colors">Início</a>
+        <a href="#sobre" class="hover:text-blue-200 transition-colors">Sobre</a>
+        <a href="#componentes" class="hover:text-blue-200 transition-colors">Componentes</a>
+        <a href="#contato" class="hover:text-blue-200 transition-colors">Contato</a>
+      </div>
+      <button class="bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Entrar</button>
+    </div>
+  </nav>
+
+  <section id="inicio" class="pt-32 pb-12 px-4 bg-gradient-to-r from-blue-600 to-indigo-700 text-white min-h-[70vh] flex flex-col justify-center items-center gap-6 text-center">
+    <h1 class="text-4xl md:text-6xl font-extrabold uppercase tracking-tighter leading-tight">
+      Frameworks CSS<br><span class="text-yellow-300">com Tailwind CSS</span>
+    </h1>
+    <p class="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto font-light">
+      Desenvolva interfaces modernas, responsivas e consistentes utilizando classes utilitárias diretamente no HTML.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+      <button class="bg-white text-blue-600 px-8 py-3 rounded-xl font-bold shadow-lg hover:bg-yellow-100 transition-all transform hover:scale-105">Começar agora</button>
+      <button class="border-2 border-white text-white px-8 py-3 rounded-xl font-bold hover:bg-white hover:text-blue-600 transition-all">Saiba mais</button>
+    </div>
+  </section>
+
+
+  <section id="sobre" class="py-16 px-4 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4 uppercase">Por que usar Tailwind?</h2>
+        <div class="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
+        <p class="text-gray-600 mt-4 max-w-xl mx-auto">Utilitários que aceleram o desenvolvimento e garantem consistência visual em todo o projeto.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-gray-50 p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow">
+          <h3 class="text-xl font-semibold text-blue-600 mb-3">Utility-First</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Pequenas classes com responsabilidade única, combináveis para construir qualquer interface.</p>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow">
+          <h3 class="text-xl font-semibold text-blue-600 mb-3">Responsivo</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Prefixos como sm:, md:, lg: permitem adaptação mobile-first sem CSS separado.</p>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow">
+          <h3 class="text-xl font-semibold text-blue-600 mb-3">Consistência</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Sistema padronizado de cores, espaços e tipografia através de tokens de design.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Componentes: flexbox, grid, bordas, dimensões, cores, posicionamento, responsividade -->
+  <section id="componentes" class="py-16 px-4 bg-gray-100">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4 uppercase">Componentes</h2>
+        <div class="w-20 h-1 bg-indigo-600 mx-auto rounded-full"></div>
+      </div>
+
+      <!-- Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-green-100 text-green-600 rounded-lg flex items-center justify-center mb-4">⚡</div>
+          <h4 class="font-semibold text-gray-800 mb-2">Rápido</h4>
+          <p class="text-gray-500 text-sm">Desenvolvimento ágil com classes utilitárias.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center mb-4">📱</div>
+          <h4 class="font-semibold text-gray-800 mb-2">Mobile First</h4>
+          <p class="text-gray-500 text-sm">Design responsivo integrado com breakpoints.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center mb-4">🎨</div>
+          <h4 class="font-semibold text-gray-800 mb-2">Customizável</h4>
+          <p class="text-gray-500 text-sm">Adapte cores, tipografia e espaços facilmente.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-red-100 text-red-600 rounded-lg flex items-center justify-center mb-4">🧩</div>
+          <h4 class="font-semibold text-gray-800 mb-2">Modular</h4>
+          <p class="text-gray-500 text-sm">Reutilize componentes em várias páginas.</p>
+        </div>
+      </div>
+
+      <!-- Exemplo prático com posicionamento absoluto + flexbox -->
+      <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-24 h-24 bg-blue-100 rounded-full opacity-50"></div>
+        <div class="relative z-10 flex flex-col md:flex-row items-center gap-8">
+          <div class="md:w-1/2 flex justify-center">
+            <img src="https://via.placeholder.com/300x200" alt="Exemplo" class="w-64 h-48 rounded-xl shadow-md object-cover border-4 border-blue-100">
+          </div>
+          <div class="md:w-1/2">
+            <h3 class="text-2xl font-bold text-gray-800 mb-3">Posicionamento Flexbox</h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">Combinação de flexbox com posicionamento absoluto para elementos decorativos sobrepostos.</p>
+            <div class="flex gap-3">
+              <span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-xs font-semibold">Utilitário</span>
+              <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs font-semibold">Responsivo</span>
+              <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">Grid</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+  <footer id="contato" class="bg-gray-900 text-white py-12 px-4">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center font-bold text-white">DT</div>
+        <span class="font-bold text-lg uppercase">Frameworks CSS</span>
+      </div>
+      <p class="text-gray-400 text-sm">Desenvolvido com Tailwind CSS - Atividade 02 (parte 1)</p>
+      <div class="flex gap-4">
+        <a href="#" class="text-gray-400 hover:text-white transition-colors">GitHub</a>
+        <a href="#" class="text-gray-400 hover:text-white transition-colors">LinkedIn</a>
+        <a href="#" class="text-gray-400 hover:text-white transition-colors">E-mail</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
